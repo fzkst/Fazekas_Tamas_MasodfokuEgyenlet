@@ -1,16 +1,63 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-<?import javafx.scene.control.Button?>
-<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
-      fx:controller="com.example.fazekas_tamas_masodfokuegyenlet.HelloController">
+<VBox prefWidth="220.0" spacing="20.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.fazekas_tamas_masodfokuegyenlet.MasodfokuEgyenletController">
     <padding>
-        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
     </padding>
-
-    <Label fx:id="welcomeText"/>
-    <Button text="Hello!" onAction="#onHelloButtonClick"/>
+   <children>
+      <HBox prefWidth="200.0" spacing="5.0">
+         <children>
+            <TextField fx:id="textInput1" maxWidth="30.0" />
+            <Label text="x^2+">
+               <HBox.margin>
+                  <Insets top="5.0" />
+               </HBox.margin>
+            </Label>
+            <TextField fx:id="textInput2" maxWidth="30.0" />
+            <Label text="x+">
+               <HBox.margin>
+                  <Insets top="5.0" />
+               </HBox.margin>
+            </Label>
+            <TextField fx:id="textInput3" maxWidth="30.0" />
+            <Label text="= 0">
+               <HBox.margin>
+                  <Insets top="5.0" />
+               </HBox.margin>
+            </Label>
+         </children>
+      </HBox>
+      <Button fx:id="buttonSzamol" mnemonicParsing="false" onAction="#szamol" text="Számol">
+         <VBox.margin>
+            <Insets />
+         </VBox.margin>
+      </Button>
+      <HBox prefWidth="200.0">
+         <children>
+            <Label text="x1 =" />
+            <Label fx:id="labelEredmeny1">
+               <HBox.margin>
+                  <Insets left="5.0" />
+               </HBox.margin>
+            </Label>
+         </children>
+      </HBox>
+      <HBox prefWidth="200.0">
+         <children>
+            <Label fx:id="labelX2" text="x2 =" />
+            <Label fx:id="labelEredmeny2">
+               <HBox.margin>
+                  <Insets left="5.0" />
+               </HBox.margin>
+            </Label>
+         </children>
+      </HBox>
+   </children>
 </VBox>
